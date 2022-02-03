@@ -1,10 +1,19 @@
 <section class="cart-show">
 
+<% if enhanced_cart.length == 0 %>
+<h1>My Cart is Empty</h1>
+<div class="alert alert-primary" role="alert">
+Please go to Home Page for searching products <a href="/" class="alert-link">Click Here</a>
+</div>  
+
+<% else %>
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
 
+  
   <div class="panel panel-default items">
+
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -48,5 +57,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
