@@ -1,5 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
+   <div class="navbar-brand">
+      <% if current_user %>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+       <% else %>
+        <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+     <% end %>
+    </div>
+ 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -9,6 +17,7 @@
       </button>
       <a class="navbar-brand" href="/">Jungle</a>
     </div>
+    
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
